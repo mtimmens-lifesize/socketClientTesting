@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+const io = require('socket.io-client');
+
+const socketioOptions = {
+  autoConnect: true,
+  transports: ['websocket'],
+  pingTimeout: 1000,
+  pingInterval: 1000,
+  connect_timeout: 1500, // connect_timeout event fires after...
+  reconnection: true,
+  reconnectionAttempts: 10,      
+  jsonp: false,
+  forceNew: true,
+  upgrade: false,
+  rejectUnauthorized: false
+};
+
+const socket = io('wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket', socketioOptions);
+
+socket.on('connect', (e) => {
+  console.log('connect', e);
+});
+socket.on('event', (e) => {
+  console.log('event', e);
+});
+socket.on('connect_error', (e) => {
+  console.error('connect_error: ', e);
+});
+socket.on('error', (e) => {
+  console.error('error', e);
+});
+socket.on('disconnect', (e) => {
+  console.error('disconnect', e);
+});
+socket.on('connect_timeout', (e) => {
+  console.log('Timeout: ', e);
+});
+socket.on('reconnect_attempt', () => {
+  console.error('reconnect_attempt');
+});
+socket.on('reconnect', () => {
+  console.error('reconnect successful');
+});
+socket.on('reconnecting', () => {
+  console.error('reconnecting');
+});
+socket.on('reconnect_error', (e) => {
+  console.error('reconnect_error: ', e);
+});
+socket.on('reconnect_failed', () => {
+  console.error('reconnect_failed');
+});
+
+console.log('Opening socket connection...');
+socket.open();

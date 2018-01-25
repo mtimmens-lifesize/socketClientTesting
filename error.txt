@@ -1,0 +1,154 @@
+[mtimmens@Marty:~/Documents/DW/code/workspace/socketClientTesting]$ node client
+Opening socket connection...
+connect_error:  { Error: websocket error
+    at WS.Transport.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transport.js:64:13)
+    at WebSocket.ws.onerror (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transports/websocket.js:150:10)
+    at WebSocket.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/EventTarget.js:109:16)
+    at emitOne (events.js:96:13)
+    at WebSocket.emit (events.js:189:7)
+    at WebSocket.finalize (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:182:41)
+    at ClientRequest._req.on (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:647:10)
+    at emitOne (events.js:96:13)
+    at ClientRequest.emit (events.js:189:7)
+    at TLSSocket.socketOnData (_http_client.js:416:9)
+  type: 'TransportError',
+  description:
+   { Error: Parse Error
+       at TLSSocket.socketOnData (_http_client.js:411:20)
+       at emitOne (events.js:96:13)
+       at TLSSocket.emit (events.js:189:7)
+       at readableAddChunk (_stream_readable.js:176:18)
+       at TLSSocket.Readable.push (_stream_readable.js:134:10)
+       at TLSWrap.onread (net.js:551:20)
+     bytesParsed: 0,
+     code: 'HPE_INVALID_CONSTANT',
+     type: 'error',
+     target:
+      WebSocket {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 4,
+        _maxListeners: undefined,
+        readyState: 2,
+        bytesReceived: 0,
+        extensions: {},
+        protocol: '',
+        _binaryType: 'arraybuffer',
+        _finalize: [Function: bound finalize],
+        _closeFrameReceived: false,
+        _closeFrameSent: false,
+        _closeMessage: '',
+        _closeTimer: null,
+        _finalized: true,
+        _closeCode: 1006,
+        _receiver: null,
+        _sender: null,
+        _socket: null,
+        _ultron: null,
+        protocolVersion: 13,
+        _isServer: false,
+        url: 'wss://x54334e42-wan.lifesizecloud.com/socket.io/?EIO=3&transport=websocket',
+        _req: null } } }
+reconnect_attempt
+reconnecting
+connect_error:  { Error: websocket error
+    at WS.Transport.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transport.js:64:13)
+    at WebSocket.ws.onerror (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transports/websocket.js:150:10)
+    at WebSocket.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/EventTarget.js:109:16)
+    at emitOne (events.js:96:13)
+    at WebSocket.emit (events.js:189:7)
+    at WebSocket.finalize (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:182:41)
+    at ClientRequest._req.on (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:647:10)
+    at emitOne (events.js:96:13)
+    at ClientRequest.emit (events.js:189:7)
+    at TLSSocket.socketOnData (_http_client.js:416:9)
+  type: 'TransportError',
+  description:
+   { Error: Parse Error
+       at TLSSocket.socketOnData (_http_client.js:411:20)
+       at emitOne (events.js:96:13)
+       at TLSSocket.emit (events.js:189:7)
+       at readableAddChunk (_stream_readable.js:176:18)
+       at TLSSocket.Readable.push (_stream_readable.js:134:10)
+       at TLSWrap.onread (net.js:551:20)
+     bytesParsed: 0,
+     code: 'HPE_INVALID_CONSTANT',
+     type: 'error',
+     target:
+      WebSocket {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 4,
+        _maxListeners: undefined,
+        readyState: 2,
+        bytesReceived: 0,
+        extensions: {},
+        protocol: '',
+        _binaryType: 'arraybuffer',
+        _finalize: [Function: bound finalize],
+        _closeFrameReceived: false,
+        _closeFrameSent: false,
+        _closeMessage: '',
+        _closeTimer: null,
+        _finalized: true,
+        _closeCode: 1006,
+        _receiver: null,
+        _sender: null,
+        _socket: null,
+        _ultron: null,
+        protocolVersion: 13,
+        _isServer: false,
+        url: 'wss://x54334e42-wan.lifesizecloud.com/socket.io/?EIO=3&transport=websocket',
+        _req: null } } }
+reconnect_error:  { Error: websocket error
+    at WS.Transport.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transport.js:64:13)
+    at WebSocket.ws.onerror (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transports/websocket.js:150:10)
+    at WebSocket.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/EventTarget.js:109:16)
+    at emitOne (events.js:96:13)
+    at WebSocket.emit (events.js:189:7)
+    at WebSocket.finalize (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:182:41)
+    at ClientRequest._req.on (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:647:10)
+    at emitOne (events.js:96:13)
+    at ClientRequest.emit (events.js:189:7)
+    at TLSSocket.socketOnData (_http_client.js:416:9)
+  type: 'TransportError',
+  description:
+   { Error: Parse Error
+       at TLSSocket.socketOnData (_http_client.js:411:20)
+       at emitOne (events.js:96:13)
+       at TLSSocket.emit (events.js:189:7)
+       at readableAddChunk (_stream_readable.js:176:18)
+       at TLSSocket.Readable.push (_stream_readable.js:134:10)
+       at TLSWrap.onread (net.js:551:20)
+     bytesParsed: 0,
+     code: 'HPE_INVALID_CONSTANT',
+     type: 'error',
+     target:
+      WebSocket {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 4,
+        _maxListeners: undefined,
+        readyState: 2,
+        bytesReceived: 0,
+        extensions: {},
+        protocol: '',
+        _binaryType: 'arraybuffer',
+        _finalize: [Function: bound finalize],
+        _closeFrameReceived: false,
+        _closeFrameSent: false,
+        _closeMessage: '',
+        _closeTimer: null,
+        _finalized: true,
+        _closeCode: 1006,
+        _receiver: null,
+        _sender: null,
+        _socket: null,
+        _ultron: null,
+        protocolVersion: 13,
+        _isServer: false,
+        url: 'wss://x54334e42-wan.lifesizecloud.com/socket.io/?EIO=3&transport=websocket',
+        _req: null } } }
+reconnect_attempt
+reconnecting
+reconnect successful
