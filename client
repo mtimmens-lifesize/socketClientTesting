@@ -14,7 +14,8 @@ const socketioOptions = {
   upgrade: false,
   rejectUnauthorized: false
 };
-
+//EIO=3 means engine.io version 3...it doesnt seem to matter but whatever
+//const socket = io('wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?transport=websocket', socketioOptions);
 const socket = io('wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket', socketioOptions);
 
 socket.on('connect', (e) => {
@@ -25,24 +26,26 @@ socket.on('event', (e) => {
 });
 socket.on('connect_error', (e) => {
   console.error('connect_error: ', e);
+  console.log('connect error socket', socket);
 });
 socket.on('error', (e) => {
   console.error('error', e);
+  console.log('socket', socket);
 });
 socket.on('disconnect', (e) => {
-  console.error('disconnect', e);
+  console.log('disconnect', e);
 });
 socket.on('connect_timeout', (e) => {
   console.log('Timeout: ', e);
 });
 socket.on('reconnect_attempt', () => {
-  console.error('reconnect_attempt');
+  console.log('reconnect_attempt');
 });
 socket.on('reconnect', () => {
-  console.error('reconnect successful');
+  console.log('reconnect successful');
 });
 socket.on('reconnecting', () => {
-  console.error('reconnecting');
+  console.log('reconnecting');
 });
 socket.on('reconnect_error', (e) => {
   console.error('reconnect_error: ', e);

@@ -1,5 +1,17 @@
-[mtimmens@Marty:~/Documents/DW/code/workspace/socketClientTesting]$ node client
+16:14 $ DEBUG=* node client
+  socket.io-client:url parse wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket +0ms
+  socket.io-client ignoring socket cache for wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket +3ms
+  socket.io-client:manager readyState closed +2ms
+  socket.io-client:manager opening wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket +0ms
+  engine.io-client:socket creating transport "websocket" +1ms
+  engine.io-client:socket setting transport websocket +17ms
+  socket.io-client:manager connect attempt will timeout after 20000 +1ms
+  socket.io-client:manager readyState opening +1ms
 Opening socket connection...
+  socket.io-client:manager readyState opening +4ms
+  engine.io-client:socket socket error {"type":"TransportError","description":{"bytesParsed":0,"code":"HPE_INVALID_CONSTANT","type":"error","target":{"domain":null,"_events":{},"_eventsCount":4,"readyState":2,"bytesReceived":0,"extensions":{},"protocol":"","_binaryType":"arraybuffer","_closeFrameReceived":false,"_closeFrameSent":false,"_closeMessage":"","_closeTimer":null,"_finalized":true,"_closeCode":1006,"_receiver":null,"_sender":null,"_socket":null,"_ultron":null,"protocolVersion":13,"_isServer":false,"url":"wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket","_req":null}}} +64ms
+  socket.io-client:manager connect_error +0ms
+  socket.io-client:manager cleanup +0ms
 connect_error:  { Error: websocket error
     at WS.Transport.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transport.js:64:13)
     at WebSocket.ws.onerror (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transports/websocket.js:150:10)
@@ -47,108 +59,138 @@ connect_error:  { Error: websocket error
         _ultron: null,
         protocolVersion: 13,
         _isServer: false,
-        url: 'wss://x54334e42-wan.lifesizecloud.com/socket.io/?EIO=3&transport=websocket',
+        url: 'wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket',
         _req: null } } }
+connect error socket Socket {
+  io:
+   Manager {
+     nsps: { '/socket.io/': [Circular] },
+     subs: [],
+     opts:
+      { autoConnect: true,
+        transports: [Object],
+        pingTimeout: 1000,
+        pingInterval: 1000,
+        connect_timeout: 1500,
+        reconnection: true,
+        reconnectionAttempts: 10,
+        jsonp: false,
+        forceNew: true,
+        upgrade: false,
+        rejectUnauthorized: false,
+        path: '/socket.io',
+        hostname: 'x6c736c50-wan.lifesizecloudbeta.com',
+        secure: true,
+        port: '443',
+        query: 'EIO=3&transport=websocket' },
+     _reconnection: true,
+     _reconnectionAttempts: 10,
+     _reconnectionDelay: 1000,
+     _reconnectionDelayMax: 5000,
+     _randomizationFactor: 0.5,
+     backoff: Backoff { ms: 1000, max: 5000, factor: 2, jitter: 0.5, attempts: 0 },
+     _timeout: 20000,
+     readyState: 'closed',
+     uri: 'wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket',
+     connecting: [ [Circular] ],
+     lastPing: null,
+     encoding: false,
+     packetBuffer: [],
+     encoder: Encoder {},
+     decoder: Decoder { reconstructor: null },
+     autoConnect: true,
+     engine:
+      Socket {
+        secure: true,
+        agent: false,
+        hostname: 'x6c736c50-wan.lifesizecloudbeta.com',
+        port: '443',
+        query: [Object],
+        upgrade: false,
+        path: '/socket.io/',
+        forceJSONP: false,
+        jsonp: false,
+        forceBase64: false,
+        enablesXDR: false,
+        timestampParam: 't',
+        timestampRequests: undefined,
+        transports: [Object],
+        transportOptions: {},
+        readyState: 'opening',
+        writeBuffer: [],
+        prevBufferLen: 0,
+        policyPort: 843,
+        rememberUpgrade: false,
+        binaryType: null,
+        onlyBinaryUpgrades: undefined,
+        perMessageDeflate: [Object],
+        pfx: null,
+        key: null,
+        passphrase: null,
+        cert: null,
+        ca: null,
+        ciphers: null,
+        rejectUnauthorized: false,
+        forceNode: false,
+        id: null,
+        upgrades: null,
+        pingInterval: null,
+        pingTimeout: null,
+        pingIntervalTimer: null,
+        pingTimeoutTimer: null,
+        transport: [Object],
+        _callbacks: [Object] },
+     skipReconnect: false,
+     _callbacks: { '$open': [Object], '$packet': [Object], '$close': [Object] } },
+  nsp: '/socket.io/',
+  json: [Circular],
+  ids: 0,
+  acks: {},
+  receiveBuffer: [],
+  sendBuffer: [],
+  connected: false,
+  disconnected: true,
+  query: 'EIO=3&transport=websocket',
+  subs:
+   [ { destroy: [Function: destroy] },
+     { destroy: [Function: destroy] },
+     { destroy: [Function: destroy] } ],
+  _callbacks:
+   { '$connecting': [ [Function: onConnecting] ],
+     '$connect': [ [Function], [Function] ],
+     '$event': [ [Function] ],
+     '$connect_error': [ [Function] ],
+     '$error': [ [Function] ],
+     '$disconnect': [ [Function] ],
+     '$connect_timeout': [ [Function] ],
+     '$reconnect_attempt': [ [Function] ],
+     '$reconnect': [ [Function] ],
+     '$reconnecting': [ [Function] ],
+     '$reconnect_error': [ [Function] ],
+     '$reconnect_failed': [ [Function] ] } }
+  socket.io-client:manager will wait 962ms before reconnect attempt +23ms
+  engine.io-client:socket socket close with reason: "transport error" +0ms
+  socket.io-client:manager attempting reconnect +963ms
 reconnect_attempt
 reconnecting
-connect_error:  { Error: websocket error
-    at WS.Transport.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transport.js:64:13)
-    at WebSocket.ws.onerror (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transports/websocket.js:150:10)
-    at WebSocket.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/EventTarget.js:109:16)
-    at emitOne (events.js:96:13)
-    at WebSocket.emit (events.js:189:7)
-    at WebSocket.finalize (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:182:41)
-    at ClientRequest._req.on (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:647:10)
-    at emitOne (events.js:96:13)
-    at ClientRequest.emit (events.js:189:7)
-    at TLSSocket.socketOnData (_http_client.js:416:9)
-  type: 'TransportError',
-  description:
-   { Error: Parse Error
-       at TLSSocket.socketOnData (_http_client.js:411:20)
-       at emitOne (events.js:96:13)
-       at TLSSocket.emit (events.js:189:7)
-       at readableAddChunk (_stream_readable.js:176:18)
-       at TLSSocket.Readable.push (_stream_readable.js:134:10)
-       at TLSWrap.onread (net.js:551:20)
-     bytesParsed: 0,
-     code: 'HPE_INVALID_CONSTANT',
-     type: 'error',
-     target:
-      WebSocket {
-        domain: null,
-        _events: [Object],
-        _eventsCount: 4,
-        _maxListeners: undefined,
-        readyState: 2,
-        bytesReceived: 0,
-        extensions: {},
-        protocol: '',
-        _binaryType: 'arraybuffer',
-        _finalize: [Function: bound finalize],
-        _closeFrameReceived: false,
-        _closeFrameSent: false,
-        _closeMessage: '',
-        _closeTimer: null,
-        _finalized: true,
-        _closeCode: 1006,
-        _receiver: null,
-        _sender: null,
-        _socket: null,
-        _ultron: null,
-        protocolVersion: 13,
-        _isServer: false,
-        url: 'wss://x54334e42-wan.lifesizecloud.com/socket.io/?EIO=3&transport=websocket',
-        _req: null } } }
-reconnect_error:  { Error: websocket error
-    at WS.Transport.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transport.js:64:13)
-    at WebSocket.ws.onerror (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/engine.io-client/lib/transports/websocket.js:150:10)
-    at WebSocket.onError (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/EventTarget.js:109:16)
-    at emitOne (events.js:96:13)
-    at WebSocket.emit (events.js:189:7)
-    at WebSocket.finalize (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:182:41)
-    at ClientRequest._req.on (/Users/mtimmens/Documents/DW/code/workspace/socketClientTesting/node_modules/ws/lib/WebSocket.js:647:10)
-    at emitOne (events.js:96:13)
-    at ClientRequest.emit (events.js:189:7)
-    at TLSSocket.socketOnData (_http_client.js:416:9)
-  type: 'TransportError',
-  description:
-   { Error: Parse Error
-       at TLSSocket.socketOnData (_http_client.js:411:20)
-       at emitOne (events.js:96:13)
-       at TLSSocket.emit (events.js:189:7)
-       at readableAddChunk (_stream_readable.js:176:18)
-       at TLSSocket.Readable.push (_stream_readable.js:134:10)
-       at TLSWrap.onread (net.js:551:20)
-     bytesParsed: 0,
-     code: 'HPE_INVALID_CONSTANT',
-     type: 'error',
-     target:
-      WebSocket {
-        domain: null,
-        _events: [Object],
-        _eventsCount: 4,
-        _maxListeners: undefined,
-        readyState: 2,
-        bytesReceived: 0,
-        extensions: {},
-        protocol: '',
-        _binaryType: 'arraybuffer',
-        _finalize: [Function: bound finalize],
-        _closeFrameReceived: false,
-        _closeFrameSent: false,
-        _closeMessage: '',
-        _closeTimer: null,
-        _finalized: true,
-        _closeCode: 1006,
-        _receiver: null,
-        _sender: null,
-        _socket: null,
-        _ultron: null,
-        protocolVersion: 13,
-        _isServer: false,
-        url: 'wss://x54334e42-wan.lifesizecloud.com/socket.io/?EIO=3&transport=websocket',
-        _req: null } } }
-reconnect_attempt
-reconnecting
+  socket.io-client:manager readyState closed +1ms
+  socket.io-client:manager opening wss://x6c736c50-wan.lifesizecloudbeta.com/socket.io/?EIO=3&transport=websocket +0ms
+  engine.io-client:socket creating transport "websocket" +1ms
+  engine.io-client:socket setting transport websocket +3ms
+  socket.io-client:manager connect attempt will timeout after 20000 +0ms
+  engine.io-client:socket socket receive: type "open", data "{"sid":"KzVxpoCyOw51dPhiABP8","upgrades":[],"pingInterval":25000,"pingTimeout":60000}" +47ms
+  engine.io-client:socket socket open +0ms
+  socket.io-client:manager open +0ms
+  socket.io-client:manager cleanup +0ms
+  socket.io-client:socket transport is open - connecting +1ms
+  socket.io-client:socket sending connect packet with query EIO=3&transport=websocket +0ms
+  socket.io-client:manager writing packet {"type":0,"query":"EIO=3&transport=websocket","nsp":"/socket.io/"} +0ms
+  socket.io-parser encoding packet {"type":0,"query":"EIO=3&transport=websocket","nsp":"/socket.io/?EIO=3&transport=websocket"} +0ms
+  socket.io-parser encoded {"type":0,"query":"EIO=3&transport=websocket","nsp":"/socket.io/?EIO=3&transport=websocket"} as 0/socket.io/?EIO=3&transport=websocket, +1ms
+  engine.io-client:socket flushing 1 packets in socket +0ms
+  socket.io-client:manager reconnect success +1ms
 reconnect successful
+  engine.io-client:socket socket receive: type "message", data "0" +1ms
+  socket.io-parser decoded 0 as {"type":0,"nsp":"/"} +1ms
+  engine.io-client:socket socket receive: type "message", data "4/socket.io/?EIO=3&transport=websocket,"Invalid namespace"" +6ms
+  socket.io-parser decoded 4/socket.io/?EIO=3&transport=websocket,"Invalid namespace" as {"type":4,"nsp":"/socket.io/?EIO=3&transport=websocket","data":"Invalid namespace"} +0ms
